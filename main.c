@@ -97,4 +97,80 @@ void admitPatient(){
 	fwrite(&p, sizeof(p),1,fp);
 	fclose(fp);
 
+
+}
+
+void patientList(){
+	system("cls");
+	printf("<== Patient List ==>\n\n");
+	printf("%-10s %-30s %-30s %-20s %s\n", "ID","Patient Name", "Address", "Disease", "Date");
+
+	printf("----------------------------------------------------------------------------------------------------------\n");
+	
+	fp = fopen("patient.txt", "rb");
+	
+	while(fread(&p,sizeof(p),1,fp==1)){
+		printf("%-10d %-30s %-30s %-20s %s\n", p.id, p.patientName, 
+			    p.patientAddress, p.disease, p.date);
+	}
+
+	fclose(fp);
+
+
+
+
+    }
+
+}
+
+void dischargePatient(){
+	int id, f=0;
+	system("cls");
+	printf("<== Discharge Patient ==>\n\n");
+	printf("Enter Patient id to discharge: ");
+	scanf("%d", &id);
+
+	FILE *ft;
+
+	fp = fopen("patient.txt", "rb");
+	ft = fopen("temp.txt", "wb");
+
+	while(fread(&p, sizeof(p), 1, fp) == 1){
+		if(id == p.id){
+			f=1;
+        	}
+		else{
+            		fwrite(&p, sizeof(p), 1, ft);
+        	}
+    	}
+
+    	if(f==1){
+        	printf("\n\nPatient Discharged Successfully.");
+    	}
+	else{
+        	printf("\n\nRecord Not Found !");
+    	}
+
+    	fclose(fp);
+    	fclose(ft);
+
+    	remove("patient.txt");
+    	rename("temp.txt", "patient.txt");
+
+}
+
+
+void doctorList(){
+    system("cls");
+    printf("<== Doctor List ==>\n\n");
+
+    printf("%-10s %-30s %-30s %-30s %s\n", "id", "Name", "Address", "Specialize","Date");
+    printf("-------------------------------------------------------------------------------------------------------------------\n");
+
+    fp = fopen("doctor.txt", "rb");
+    while(fread(&d, sizeof(d), 1, fp) == 1){
+        printf("%-10d %-30s %-30s %-30s %s\n", d.id, d.name, d.address, d.specialize, d.date);
+    }
+
+    fclose(fp);
 }
