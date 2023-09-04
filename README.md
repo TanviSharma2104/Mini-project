@@ -10,11 +10,11 @@ Hospital Management System is a comprehensive solution for managing patient admi
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-  - [Admitting Patients](#admitting-patients)
-  - [Viewing Patient List](#viewing-patient-list)
-  - [Discharging Patients](#discharging-patients)
-  - [Adding Doctors](#adding-doctors)
-  - [Viewing Doctor List](#viewing-doctor-list)
+  - [Admitting Patients](#usage)
+  - [Viewing Patient List](#usage)
+  - [Discharging Patients](#usage)
+  - [Adding Doctors](#usage)
+  - [Viewing Doctor List](#usage)
 
 
 ## Features
