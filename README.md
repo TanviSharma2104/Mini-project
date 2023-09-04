@@ -10,11 +10,11 @@ Hospital Management System is a comprehensive solution for managing patient admi
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
-  - [Admitting Patients](#usage)
-  - [Viewing Patient List](#usage)
-  - [Discharging Patients](#usage)
-  - [Adding Doctors](#usage)
-  - [Viewing Doctor List](#usage)
+  - [Admitting Patients](#admitting-patients)
+  - [Viewing Patient List](#viewing-patient-list)
+  - [Discharging Patients](#discharging-patients)
+  - [Adding Doctors](#adding-doctors)
+  - [Viewing Doctor List](#viewing-doctor-list)
 
 
 ## Features
@@ -50,30 +50,30 @@ Before you begin, ensure you have the following prerequisites installed:
    ```bash
    ./main
 
-### Usage
+## Usage
 
-1. Admitting Patients
+### Admitting Patients
 - To admit a patient, select the "Admit Patient" option from the main menu.
 - Enter the patient's details when prompted, including ID, name, address, and disease.
 - The admission date is recorded automatically.
 
-2. Viewing Patient List
+### Viewing Patient List
 - Select the "Patient List" option from the main menu to view a list of admitted patients.
 - The list includes patient ID, name, address, disease, and admission date.
 
-3. Discharging Patients
+### Discharging Patients
 - Choose the "Discharge Patient" option and enter the patient's ID to discharge them from the hospital.
 - The patient's record will be removed from the system.
 
-4. Adding Doctors
+### Adding Doctors
 - Add doctors to the system by selecting the "Add Doctor" option.
 - Enter the doctor's details, including ID, name, address, and specialization.
 
-5. Viewing Doctor List
+### Viewing Doctor List
 - To view a list of doctors in the hospital, select the "Doctor List" option.
 - The list displays doctor ID, name, address, specialization, and addition date.
 
-### Snapshots of project 
+## Snapshots of project 
 ![Screenshot 2023-09-04 113818](https://github.com/TanviSharma2104/Mini-project/assets/101709149/1c3a0f39-86ec-45ba-9efd-e20f48b7a2af)
 
 ![Screenshot 2023-09-04 113857](https://github.com/TanviSharma2104/Mini-project/assets/101709149/8a76d513-e636-480e-97a9-21e92c5d46fa)
