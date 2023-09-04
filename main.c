@@ -15,7 +15,7 @@ struct patient {
     char patientName[50];
     char patientAddress[50];
     char disease[50];
-    char date[12];
+    char date[12]; 
 } p;
 
 struct doctor {
@@ -88,16 +88,13 @@ void admitPatient() {
     scanf("%d", &p.id);
 
     printf("Enter Patient name: ");
-    fflush(stdin);
-    gets(p.patientName);
+    scanf(" %49[^\n]", p.patientName); 
 
     printf("Enter Patient Address: ");
-    fflush(stdin);
-    gets(p.patientAddress);
+    scanf(" %49[^\n]", p.patientAddress);
 
     printf("Enter Patient Disease: ");
-    fflush(stdin);
-    gets(p.disease);
+    scanf(" %49[^\n]", p.disease);
 
     printf("\nPatient Added Successfully");
 
@@ -187,17 +184,13 @@ void addDoctor() {
     scanf("%d", &d.id);
 
     printf("Enter Doctor Name: ");
-    fflush(stdin);
-    gets(d.name);
+    scanf(" %49[^\n]", d.name);
 
     printf("Enter Doctor Address: ");
-    fflush(stdin);
-    gets(d.address);
+    scanf(" %49[^\n]", d.address);
 
     printf("Doctor Specialize in: ");
-    fflush(stdin);
-    gets(d.specialize);
-
+    scanf(" %49[^\n]", d.specialize);
     printf("Doctor Added Successfully\n\n");
 
     fwrite(&d, sizeof(d), 1, fp);
